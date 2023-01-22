@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trainapplication.LastController">
+    <children>
+        <ImageView fx:id="image" fitHeight="524.0" fitWidth="979.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../train.png" />
+            </image>
+        </ImageView>
+      <Pane layoutX="537.0" opacity="0.76" prefHeight="514.0" prefWidth="442.0" style="-fx-background-color: #0d2554;">
+         <children>
+            <Label layoutX="132.0" layoutY="92.0" prefHeight="35.0" prefWidth="313.0" text="Sorted train by car class" textFill="WHITE">
+               <font>
+                  <Font name="Menlo Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="173.0" prefHeight="83.0" prefWidth="234.0" text="Total number of &#10;cars:" textFill="WHITE">
+               <font>
+                  <Font name="Menlo Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="7.0" layoutY="375.0" prefHeight="137.0" prefWidth="188.0" style="-fx-background-color: #0000;" text="Total weight &#10;of luggage:" textFill="WHITE">
+               <font>
+                  <Font name="Menlo Regular" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="sortedTableView" layoutX="191.0" layoutY="139.0" prefHeight="365.0" prefWidth="249.0" style="-fx-background-radius: 5; -fx-background-color: black;">
+              <columns>
+                <TableColumn fx:id="sortedCarColumn" prefWidth="107.77545166015625" text="car" />
+                  <TableColumn fx:id="sortedClassColumn" prefWidth="77.72467041015625" text="class" />
+              </columns>
+            </TableView>
+            <Label layoutX="7.0" layoutY="260.0" prefHeight="76.0" prefWidth="182.0" text="Total number&#10;of seats:" textFill="WHITE">
+               <font>
+                  <Font name="Menlo Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalCarsLabel" layoutX="82.0" layoutY="212.0" prefHeight="35.0" prefWidth="102.0" text="11" textFill="#ffcd57">
+               <font>
+                  <Font name="Menlo Regular" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalSeatsLabel" alignment="CENTER" layoutX="23.0" layoutY="320.0" prefHeight="46.0" prefWidth="144.0" text="11" textFill="#ffb400">
+               <font>
+                  <Font name="Menlo Regular" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalLuggageLabel" alignment="CENTER" layoutX="23.0" layoutY="431.0" prefHeight="46.0" prefWidth="144.0" text="11" textFill="#ffcd57">
+               <font>
+                  <Font name="Menlo Regular" size="28.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="316.0" fitWidth="77.0" layoutX="362.0" layoutY="177.0" opacity="0.32">
+               <image>
+                  <Image url="@../../../sort.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="121.0" fitWidth="137.0" layoutX="-5.0" layoutY="57.0" opacity="0.51">
+               <image>
+                  <Image url="@../../../icon4.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d2554" height="68.0" layoutX="537.0" layoutY="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="441.0" />
+        <Label alignment="CENTER" layoutX="536.0" layoutY="13.0" prefHeight="52.0" prefWidth="445.0" text="Wow. Your train is ready!" textFill="WHITE">
+            <font>
+                <Font name="Menlo Regular" size="26.0" />
+            </font>
+        </Label>
+      <Button fx:id="previousPageButton" layoutY="468.0" mnemonicParsing="false" onAction="#SwitchToMainPage" opacity="0.41" prefHeight="45.0" prefWidth="224.0" style="-fx-background-color: #0d2554; -fx-background-radius: 0;" text="&lt;&lt; Previous page" textFill="WHITE">
+         <font>
+            <Font name="Apple Braille" size="24.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="9.0" layoutX="276.0" layoutY="253.0" opacity="0.62" rotate="90.0" stroke="WHITE" strokeType="INSIDE" width="514.0" />
+    </children>
+</AnchorPane>
